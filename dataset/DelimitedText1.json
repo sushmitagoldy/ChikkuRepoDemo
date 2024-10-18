@@ -1,0 +1,36 @@
+{
+	"name": "DelimitedText1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "2010-summary.csv",
+				"container": "adfdemo"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "DEST_COUNTRY_NAME",
+				"type": "String"
+			},
+			{
+				"name": "ORIGIN_COUNTRY_NAME",
+				"type": "String"
+			},
+			{
+				"name": "count",
+				"type": "String"
+			}
+		]
+	}
+}
